@@ -45,7 +45,7 @@ sudo service tor start
    
 ```markdown
 chmod +x main.sh && bash main.sh
-'''
+```
    
 4. Follow the prompts to specify the number of pages to scrape per dork.
 
