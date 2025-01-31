@@ -9,9 +9,9 @@ from bs4 import BeautifulSoup
 SEARX_URL = "https://searx.be/search"  # Replace if needed.  Make sure to include the /search endpoint
 DORK_FILE = "dorks.txt"
 OUTPUT_FILE = "urls.txt"
-REQUEST_DELAY = 10  # Seconds
+REQUEST_DELAY = 5  # Seconds
 MAX_RETRIES = 3  # Not used directly, handled within the loop
-RETRY_DELAY = 10 # Not used directly
+RETRY_DELAY = 5 # Not used directly
 USER_AGENTS = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.6723.70 Safari/537.36",
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Safari/605.1.15",
