@@ -1,7 +1,11 @@
 
 # DorkX Scraper Searxng Ip Rotation Tor🕵️‍♂️
-<img alt="Dorkx" src="https://i.ibb.co/JW821n7m/Screenshot-2025-01-31-02-39-51-466-edit-com-termux.jpg">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://i.ibb.co/JW821n7m/Screenshot-2025-01-31-02-39-51-466-edit-com-termux.jpg">
+  <source media="(prefers-color-scheme: light)" srcset="https://i.ibb.co/JW821n7m/Screenshot-2025-01-31-02-39-51-466-edit-com-termux.jpg">
+  <img alt="DorkX in Action" src="https://i.ibb.co/JW821n7m/Screenshot-2025-01-31-02-39-51-466-edit-com-termux.jpg">
 </picture>
+
 
 This script performs automated searches on Searx using dorks, extracts URLs, and saves them to a file. It leverages Tor for anonymity and includes features like IP rotation and user-agent randomization.
 
