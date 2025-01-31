@@ -33,7 +33,7 @@ sudo service tor start
 1. **Prepare Dork File**: Create a `dorks.txt` file in the same directory as the script. Add your dorks (one per line).
 2. **Run the Script**: Execute the script using:
    ```
-   python script_name.py
+   python dorkx.py
    ```
 3. Follow the prompts to specify the number of pages to scrape per dork.
 
