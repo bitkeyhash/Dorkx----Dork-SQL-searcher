@@ -1,5 +1,5 @@
 
-# DorkX Scraper Searxng Ip Rotation Tor🕵️‍♂️
+# DorkX SQL Searcher | using Searxng + Ip Rotation Tor 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://i.ibb.co/JW821n7m/Screenshot-2025-01-31-02-39-51-466-edit-com-termux.jpg">
   <source media="(prefers-color-scheme: light)" srcset="https://i.ibb.co/JW821n7m/Screenshot-2025-01-31-02-39-51-466-edit-com-termux.jpg">
@@ -38,14 +38,11 @@ sudo service tor start
 
 1. **Prepare Dork File**: Create a `dorks.txt` file in the same directory as the script. Add your dorks (one per line).
 2. **Run the Script**: Execute the script using:
-   ```markdown
-   sudo service tor start && python dorkx.py
-   ```
-   or
    
 ```markdown
 chmod +x main.sh && bash main.sh
 ```
+(ps: I have add script to filter url at the end . final output file is "sqlurl.txt" )
    
 4. Follow the prompts to specify the number of pages to scrape per dork.
 
