@@ -77,9 +77,9 @@ COLOR_CYAN = "\033[96m"
 
 
 def colored_print(text, color=COLOR_RESET, end="\n"):
-    """Prints text with ANSI color codes."""
-    print(f"{color}{text}{COLOR_RESET}", end=end)
-
+    """Returns text with ANSI color codes."""
+    return f"{color}{text}{COLOR_RESET}"
+    
 def read_dorks(filename):
     """Reads dorks from a file, stripping whitespace."""
     try:
@@ -212,7 +212,7 @@ def main():
     url_threshold = 200
 
     try:
-        num_pages_to_query = input(colored_print("How many pages to query per dork? (Enter a number):", color=COLOR_CYAN, end=""))
+        num_pages_to_query = input(colored_print("How many pages to query per dork? (Enter a number): ", color=COLOR_CYAN, end=""))
         try:
             num_pages_to_query = int(num_pages_to_query)
             if num_pages_to_query <= 0:
