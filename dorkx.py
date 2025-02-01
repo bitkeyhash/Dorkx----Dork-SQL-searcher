@@ -212,7 +212,7 @@ def main():
     url_threshold = 200
 
     try:
-        num_pages_to_query = input(colored_print("How many pages to query per dork? (Enter a number):", color=COLOR_CYAN))
+        num_pages_to_query = input(colored_print("How many pages to query per dork? (Enter a number):"))
         try:
             num_pages_to_query = int(num_pages_to_query)
             if num_pages_to_query <= 0:
