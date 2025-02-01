@@ -195,7 +195,7 @@ def save_urls_to_file(urls_to_save, filename, append=False):
         with open(filename, mode) as f:
             for url in sorted(urls_to_save): #Sort urls for easier reading
                 f.write(url + "\n")
-        colored_print(f"Saved {len(urls_to_save)} URLs to {filename} ({'appended' if append else 'overwritten'}).", color=COLOR_GREEN)
+        colored_print(f"Saved {len(urls_to_save)} URLs to {filename} ({'appended' if append else 'overwritten'}).", color=COLOR_RED)
     except Exception as e:
         colored_print(f"Error writing to output file: {e}", color=COLOR_RED)
 
