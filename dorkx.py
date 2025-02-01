@@ -212,7 +212,7 @@ def main():
     url_threshold = 200
 
     try:
-        colored_print("How many pages to query per dork? (Enter a number):Default=", color=COLOR_RED, end="")
+        colored_print("How many pages to query per dork? (Enter a number):Default=0", color=COLOR_CYAN, end="")
         num_pages_to_query = input()
         try:
             num_pages_to_query = int(num_pages_to_query)
