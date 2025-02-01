@@ -36,7 +36,7 @@ sudo service tor start
 
 ## Usage
 
-1. **Prepare Dork File**: Create a `dorks.txt` file in the same directory as the script. Add your dorks (one per line).
+1. **Prepare Dork File**: You can use Default dorks.txt or Create a `dorks.txt` file in the same directory as the script. Add your dorks (one per line).
 2. **Run the Script**: Execute the script using:
    
 ```markdown
@@ -52,13 +52,15 @@ chmod +x main.sh && bash main.sh
   Input File containing all search dorks.
 - **`urls.txt`**  
   Output file where extracted URLs are saved.
+- **`sqlurl.txt`**  
+  Output file where extracted filtered with format ?id= URLs are saved.
 
 ## Features
 
 - 🌐 **Tor Integration**: Ensures anonymity by routing traffic through Tor.
 - 🔄 **IP Rotation**: Automatically changes IP when rate-limited.
 - 🕵️‍♀️ **Customizable Headers and Cookies**: Mimics real browser behavior.
-- 📂 **Output File**: Saves unique URLs to `urls.txt`.
+- 📂 **Output Filter Final URL File**: Saves unique URLs to `sqlurl.txt`.
 
 ## Notes
 
