@@ -179,7 +179,7 @@ def searx_search(dork, page=1):
 
             else:  # Handle other request errors
                 colored_print(f"Request error: {e}", color=COLOR_RED)
-                return None
+                return
 
 
 def save_urls_to_file(urls_to_save, filename, append=False):
