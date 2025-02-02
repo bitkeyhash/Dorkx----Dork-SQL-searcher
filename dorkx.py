@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 
 # Configuration
 SEARX_URL = "https://searx.be/search"  # Replace if needed.  Make sure to include the /search endpoint
-DORK_FILE = "dorks.txt"
+DORK_FILE = "dorkfinal.txt"
 OUTPUT_FILE = "urls.txt"
 REQUEST_DELAY = 5  # Seconds
 MAX_RETRIES = 3  # Not used directly, handled within the loop
