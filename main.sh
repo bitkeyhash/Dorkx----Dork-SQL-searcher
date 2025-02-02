@@ -13,10 +13,18 @@ echo "        |____/ \__\_\_____|  by bitkeyhash°©®  ";
 echo "Disabling sleep and suspend modes..."
 sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
 
-
 # Start the Tor service
 echo "Starting Tor service..."
 sudo service tor start
+
+# Ask user about using combinations files
+read -p "Do you want to use combinations files? (y/n): " use_combi
+if [ "$use_combi" = "y" ]; then
+    echo "Running combinations files..."
+    chmod +x combi.sh && bash combi.sh
+else
+    echo "Skipping combinations files..."
+fi
 
 # Run dorkx.py using Python
 echo "Running DorkX..."
@@ -31,4 +39,3 @@ while true; do
     echo "Preventing idle timeout... $(date)"
     sleep 300
 done
-
