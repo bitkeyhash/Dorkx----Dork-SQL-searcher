@@ -8,6 +8,12 @@ echo "        / ___| / _ \| |                        ";
 echo "        \___ \| | | | |                        ";
 echo "         ___) | |_| | |___                     ";
 echo "        |____/ \__\_\_____|  by bitkeyhash°©®  ";
+
+# Prevent sleep and suspend
+echo "Disabling sleep and suspend modes..."
+sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
+
+
 # Start the Tor service
 echo "Starting Tor service..."
 sudo service tor start
@@ -16,8 +22,13 @@ sudo service tor start
 echo "Running DorkX..."
 python dorkx.py
 
-# Run filter.py Filtering URl for Injection SQL Format Python
-echo "Running Filtering URl for Injection SQL..."
+# Run filter.py Filtering URL for Injection SQL Format Python
+echo "Running Filtering URL for Injection SQL..."
 python filter.py
 
+# Keep script running to prevent idle timeout
+while true; do
+    echo "Preventing idle timeout... $(date)"
+    sleep 300
+done
 
