@@ -38,8 +38,10 @@ generate_combinations() {
 # Read File 2 into an array
 mapfile -t file2_lines < "$file2"
 
-# Process each line in File 1
+# Initialize variables
 line_count=0
+temp_output="temp_dorks.txt"
+> "$temp_output"
 
 # Start a background process to echo the number of lines generated every 10 seconds
 (
@@ -56,9 +58,19 @@ while IFS= read -r line1; do
   
   # Combine each line from File 1 with the combinations of File 2
   while IFS= read -r combo; do
-    echo "$line1 $combo" >> "$output"
+    echo "$line1 $combo" >> "$temp_output"
     ((line_count++))
+    
+    # Save to output file every 1000 lines
+    if (( line_count % 1000 == 0 )); then
+      cat "$temp_output" >> "$output"
+      > "$temp_output"
+    fi
   done <<< "$combinations"
 done < "$file1"
+
+# Save any remaining lines to the output file
+cat "$temp_output" >> "$output"
+rm "$temp_output"
 
 echo "All combinations saved to $output."
