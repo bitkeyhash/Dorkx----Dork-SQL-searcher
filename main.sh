@@ -17,15 +17,6 @@ sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.ta
 echo "Starting Tor service..."
 sudo service tor start
 
-# Ask user about using combinations files
-read -p "Do you want to use combinations files? (y/n): " use_combi
-if [ "$use_combi" = "y" ]; then
-    echo "Running combinations files..."
-    chmod +x combi.sh && bash combi.sh
-else
-    echo "Skipping combinations files..."
-fi
-
 # Run dorkx.py using Python
 echo "Running DorkX..."
 python dorkx.py
