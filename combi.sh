@@ -39,6 +39,17 @@ generate_combinations() {
 mapfile -t file2_lines < "$file2"
 
 # Process each line in File 1
+line_count=0
+
+# Start a background process to echo the number of lines generated every 10 seconds
+(
+  while true; do
+    sleep 10
+    echo "Lines generated so far: $line_count"
+  done
+) &
+
+# Process each line in File 1
 while IFS= read -r line1; do
   # Generate all combinations of lines from File 2
   combinations=$(generate_combinations "${file2_lines[@]}")
@@ -46,6 +57,7 @@ while IFS= read -r line1; do
   # Combine each line from File 1 with the combinations of File 2
   while IFS= read -r combo; do
     echo "$line1 $combo" >> "$output"
+    ((line_count++))
   done <<< "$combinations"
 done < "$file1"
 
