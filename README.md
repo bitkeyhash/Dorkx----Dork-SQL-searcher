@@ -11,8 +11,12 @@ This script performs automated searches on Searx using dorks, extracts URLs, and
 
 ## Installation
 
-### **1. Prerequisites**
+### **1. Git clone + Prerequisites**
 Ensure you have Python 3.x and `pip` installed on your system.
+Installation command Line git clone
+```markdown
+git clone https://github.com/bitkeyhash/Dorkx-Tor.git && cd Dorkx-tor
+```
 
 ### **2. Install Required Python Packages**
 Run the following command to install the required Python libraries:
