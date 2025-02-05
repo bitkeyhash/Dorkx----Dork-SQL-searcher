@@ -1,4 +1,4 @@
-
+il
 # DorkX SQL Searcher | using Searxng + Ip Rotation Tor 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://i.ibb.co/JW821n7m/Screenshot-2025-01-31-02-39-51-466-edit-com-termux.jpg">
@@ -15,7 +15,7 @@ This script performs automated searches on Searx using dorks, extracts URLs, and
 Ensure you have Python 3.x and `pip` installed on your system.
 Installation command Line git clone
 ```markdown
-git clone https://github.com/bitkeyhash/Dorkx-Tor.git && cd Dorkx-tor
+git clone https://github.com/bitkeyhash/Dorkx-Tor.git && cd Dorkx-Tor 
 ```
 
 ### **2. Install Required Python Packages**
@@ -44,7 +44,7 @@ sudo service tor start
 2. **Run the Script**: Execute the script using:
 
 ```markdown
-git clone 
+git clone https://github.com/bitkeyhash/Dorkx-Tor.git && cd Dorkx-Tor 
 ```
    
 ```markdown
