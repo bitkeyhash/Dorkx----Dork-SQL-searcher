@@ -1,4 +1,3 @@
-il
 # DorkX SQL Searcher | using Searxng + Ip Rotation Tor 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://i.ibb.co/JW821n7m/Screenshot-2025-01-31-02-39-51-466-edit-com-termux.jpg">
