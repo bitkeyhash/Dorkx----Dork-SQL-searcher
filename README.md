@@ -38,6 +38,10 @@ sudo service tor start
 
 1. **Prepare Dork File**: You can use Default dorks.txt or Create a `dorks.txt` file in the same directory as the script. Add your dorks (one per line).
 2. **Run the Script**: Execute the script using:
+
+```markdown
+git clone 
+```
    
 ```markdown
 chmod +x main.sh && bash main.sh
