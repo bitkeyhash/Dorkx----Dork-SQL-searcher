@@ -26,4 +26,4 @@ echo "Running Filtering URL for Injection SQL..."
 python filter.py
 
 
-echo "Finished.Check Output Files : urls.txt=*without filtering* and sqlurl.txt=*with filtering for sql Injections like ?id=2* Thank for using my tool "
+echo "Finished.Check Output Files : urls.txt=*without filtering* and sqlurl.txt=*with filtering for sql Injections like ?id=2* ®© BitKeyHash"
