@@ -7,7 +7,20 @@ from bs4 import BeautifulSoup
 
 # Configuration
 SEARX_URL = "https://searx.be/search"  # Replace if needed.  Make sure to include the /search endpoint
-DORK_FILE = "dorks.txt"
+
+# ANSI color codes
+COLOR_RESET = "\033[0m"
+COLOR_GREEN = "\033[92m"
+COLOR_YELLOW = "\033[93m"
+COLOR_RED = "\033[91m"
+COLOR_BLUE = "\033[94m"
+COLOR_CYAN = "\033[96m"
+
+def colored_input(prompt, color=COLOR_RESET):
+    """Prints input prompt with ANSI color codes and returns user input."""
+    return input(f"{color}{prompt}{COLOR_RESET}")
+
+DORK_FILE = colored_input("Please enter the location of the dorks file (e.g., dorks.txt): ", COLOR_CYAN)
 OUTPUT_FILE = "urls.txt"
 REQUEST_DELAY = 5  # Seconds
 MAX_RETRIES = 3  # Not used directly, handled within the loop
@@ -67,15 +80,6 @@ HEADERS = {
     "Priority": "u=0, i"
 }
 
-# ANSI color codes
-COLOR_RESET = "\033[0m"
-COLOR_GREEN = "\033[92m"
-COLOR_YELLOW = "\033[93m"
-COLOR_RED = "\033[91m"
-COLOR_BLUE = "\033[94m"
-COLOR_CYAN = "\033[96m"
-
-
 def colored_print(text, color=COLOR_RESET, end="\n"):
     """Prints text with ANSI color codes."""
     print(f"{color}{text}{COLOR_RESET}", end=end)
@@ -92,7 +96,6 @@ def read_dorks(filename):
     except Exception as e:
         colored_print(f"Error reading dork file: {e}", color=COLOR_RED)
         return []
-
 
 def extract_urls_from_html(html):
     """Extracts URLs from HTML using BeautifulSoup.  Filters and cleans them."""
@@ -181,7 +184,6 @@ def searx_search(dork, page=1):
                 colored_print(f"Request error: {e}", color=COLOR_RED)
                 return
 
-
 def save_urls_to_file(urls_to_save, filename, append=False):
     """Saves a set of URLs to a file.
 
@@ -198,7 +200,6 @@ def save_urls_to_file(urls_to_save, filename, append=False):
         colored_print(f"Saved {len(urls_to_save)} URLs to {filename} ({'appended' if append else 'overwritten'}).", color=COLOR_RED)
     except Exception as e:
         colored_print(f"Error writing to output file: {e}", color=COLOR_RED)
-
 
 def main():
     """Main function to orchestrate the scraping and URL extraction."""
@@ -265,7 +266,6 @@ def main():
         save_urls_to_file(all_urls, OUTPUT_FILE, append=True) # Append remaining URLs
 
     colored_print(f"Successfully wrote total {total_url_count} unique URLs to {OUTPUT_FILE}", color=COLOR_GREEN)
-
 
 if __name__ == "__main__":
     main()
